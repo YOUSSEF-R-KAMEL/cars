@@ -1,5 +1,5 @@
-<div class="landing">
-  <nav class="relative">
+<div class="landing relative overflow-x-hidden">
+  <nav class="relative bg-transparent">
     <div class="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <!-- Logo -->
@@ -93,36 +93,57 @@
     }
   </nav>
 
-  <div class="relative mx-auto max-w-7xl px-2 md:px-6 lg:px-8 flex flex-row justify-center items-center">
-    <div class="content flex flex-wrap items-center">
+  <div class="mx-auto max-w-7xl px-2 sm:px-4 md:px-6 lg:px-8 flex flex-col lg:flex-row justify-center items-center lg:items-center w-full">
+    <div class="content flex flex-col lg:flex-row items-center relative w-full">
       <!-- Left Section -->
-      <div class="left w-full md:w-1/3 mb-6">
-        <h1 class="mb-6 text-3xl font-semibold">Find, book and rent a car <span class="text-main">Easily</span></h1>
-        <p class="text-lg">Get a car wherever and whenever you need it with your IOS and Android device.</p>
+      <div class="left">
+        <h1 class="mb-4 sm:mb-6 text-2xl sm:text-3xl lg:text-3xl font-semibold text-center lg:text-left leading-tight">
+          Find, book and rent a car <span class="text-main">Easily</span>
+        </h1>
+        <p class="text-base sm:text-lg lg:text-lg text-center lg:text-left text-gray-700">
+          Get a car wherever and whenever you need it with your IOS and Android device.
+        </p>
       </div>
-      <!-- Right Section (Image and SVG) -->
-      <div class="right w-full md:w-2/3">
-        <div class="img-container relative">
-          <img src="./images/car.png" alt="" class="w-full h-auto">
-        </div>
-        <!-- SVG Path -->
-        <!-- <svg width="574" height="800" viewBox="0 0 574 800" fill="none" xmlns="http://www.w3.org/2000/svg"
-          class="absolute top-0 left-0 w-full h-full">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M430.338 704.17C391.28 704.17 353.925 696.741 319.662 683.153L196.682 763.664C263.946 807.539 344.208 833 430.338 833C589.601 833 728.671 745.949 803.065 616.547L692.2 552.101C639.891 643.025 542.213 704.17 430.338 704.17Z"
-            fill="#e1edf9" />
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M143.113 77.5435L269.753 400.032L143.113 722.456L343.074 591.531L635.728 400.032L343.074 208.469L143.113 77.5435Z"
-            fill="#e1edf9" />
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M430.34 95.8301C542.215 95.8301 639.893 156.975 692.202 247.899L803.067 183.452C728.61 54.0508 589.602 -33 430.34 -33C344.147 -33 263.948 -7.53875 196.621 36.3359L319.664 116.847C353.927 103.259 391.219 95.8301 430.34 95.8301Z"
-            fill="#e1edf9" />
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M94.6488 670.962L153.331 522.004L201.413 399.968L153.331 277.995L94.6488 129.038C35.4617 203.199 0 297.425 0 400.032C0 502.575 35.4617 596.801 94.6488 670.962Z"
-            fill="#e1edf9" />
-        </svg> -->
+
+      <!-- Right Section -->
+      <div class="right">
+        <img src="./images/car.png" alt="Car" loading="lazy" />
       </div>
     </div>
+
   </div>
 
+  <!-- SVG Path -->
+  <div class="bg-frame absolute top-0 w-full h-full overflow-hidden">
+    <svg width="574" height="800" viewBox="0 0 574 800" fill="none" xmlns="http://www.w3.org/2000/svg"
+      class="absolute top-0 left-0 w-full h-full">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M430.338 704.17C391.28 704.17 353.925 696.741 319.662 683.153L196.682 763.664C263.946 807.539 344.208 833 430.338 833C589.601 833 728.671 745.949 803.065 616.547L692.2 552.101C639.891 643.025 542.213 704.17 430.338 704.17Z"
+        fill="#e1edf9" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M143.113 77.5435L269.753 400.032L143.113 722.456L343.074 591.531L635.728 400.032L343.074 208.469L143.113 77.5435Z"
+        fill="#e1edf9" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M430.34 95.8301C542.215 95.8301 639.893 156.975 692.202 247.899L803.067 183.452C728.61 54.0508 589.602 -33 430.34 -33C344.147 -33 263.948 -7.53875 196.621 36.3359L319.664 116.847C353.927 103.259 391.219 95.8301 430.34 95.8301Z"
+        fill="#e1edf9" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M94.6488 670.962L153.331 522.004L201.413 399.968L153.331 277.995L94.6488 129.038C35.4617 203.199 0 297.425 0 400.032C0 502.575 35.4617 596.801 94.6488 670.962Z"
+        fill="#e1edf9" />
+    </svg>
+  </div>
 </div>
+
+<!-- <div _ngcontent-ng-c607055361="" class="content flex items-center" style="
+    position: relative;
+    width: 100%;
+"><div _ngcontent-ng-c607055361="" class="left mb-6" style="
+    width: 25%;
+"><h1 _ngcontent-ng-c607055361="" class="mb-6 text-3xl font-semibold">Find, book and rent a car <span _ngcontent-ng-c607055361="" class="text-main">Easily</span></h1><p _ngcontent-ng-c607055361="" class="text-lg">Get a car wherever and whenever you need it with your IOS and Android device.</p></div><div _ngcontent-ng-c607055361="" class="right" style="
+    position: absolute;
+    right: -25%;
+    z-index: 999999;
+    top: 50%;
+    transform: translateY(-50%);
+"><img _ngcontent-ng-c607055361="" src="./images/car.png" alt="" style="
+    width: 75rem;
+"></div></div> -->

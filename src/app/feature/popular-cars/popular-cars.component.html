@@ -1,0 +1,86 @@
+<section class="popular-deals container mx-auto px-4 py-16">
+
+  <!-- Search -->
+  <div class="search-bar flex items-center gap-4 mb-12">
+    <div class="flex items-center bg-white shadow rounded-lg px-4 py-3 w-full">
+      <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" />
+      </svg>
+      <input type="text" placeholder="Search By Name" class="w-full outline-none text-sm text-gray-600" />
+    </div>
+    <button class="bg-blue-600 hover:bg-blue-700 transition text-white font-semibold px-6 py-3 rounded-lg">
+      Search
+    </button>
+  </div>
+
+  <!-- Section title -->
+  <div class="text-center mb-12">
+    <span class="inline-block bg-blue-100 text-blue-600 text-xs font-semibold px-4 py-1 rounded-full mb-4">
+      POPULAR RENTAL DEALS
+    </span>
+    <h2 class="text-3xl font-semibold text-gray-800">
+      Most popular cars rental deals
+    </h2>
+  </div>
+
+
+  <!-- Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    @for (car of cars; track $index) {
+    <div class="car-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+
+      <!-- Image -->
+      <div class="h-32 flex items-center justify-center mb-4">
+        <img [src]="car.image" [alt]="car.car" class="max-h-full object-contain" />
+      </div>
+
+      <!-- Title -->
+      <h3 class="font-semibold text-lg mb-1">{{ car.car }}</h3>
+
+      <!-- Rating -->
+      <div class="flex items-center text-sm text-gray-500 mb-4">
+        ⭐ {{ car.rating }}
+        <span class="ml-1">({{ car.reviews }} reviews)</span>
+      </div>
+
+      <!-- Specs -->
+      <div class="grid grid-cols-2 gap-y-2 text-sm text-gray-500 mb-4">
+        <div class="flex items-center gap-2">
+          👤 {{ car.passengers }} Passengers
+        </div>
+        <div class="flex items-center gap-2">
+          ⚙️ Auto
+        </div>
+        <div class="flex items-center gap-2">
+          ❄️ Air Conditioning
+        </div>
+        <div class="flex items-center gap-2">
+          🚪 {{ car.doors }} Doors
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="flex items-center justify-between mt-auto mb-4">
+        <span class="text-sm text-gray-500">Price</span>
+        <span class="font-semibold text-gray-800">
+          ${{ car.price }}<span class="text-sm font-normal"> / day</span>
+        </span>
+      </div>
+
+      <!-- Button -->
+      <button class="bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-2 rounded-lg">
+        Rent Now →
+      </button>
+    </div>
+    }
+  </div>
+
+  <!-- Show all -->
+  <div class="text-center mt-12">
+    <a class="border border-gray-300 px-6 py-3 rounded-lg text-sm hover:bg-gray-100 transition" routerLink="/all-cars">
+      Show all vehicles →
+    </a>
+  </div>
+
+</section>
