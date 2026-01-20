@@ -4,10 +4,11 @@ import { ICar } from '../../shared/models/ICar';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from "@angular/router";
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-all-cars',
-  imports: [FormsModule, CommonModule, RouterLink],
+  imports: [FormsModule, CommonModule, RouterLink, NgxPaginationModule],
   templateUrl: './all-cars.component.html',
   styleUrl: './all-cars.component.scss',
 })
@@ -23,6 +24,10 @@ export class AllCarsComponent implements OnInit {
     'images/cars/car_04.png',
   ];
   searchVal: string = '';
+  // Paginator
+  page: number = 1;
+  itemsPerPage: number = 12;
+
 
   ngOnInit(): void {
     this.getPopularCars();
@@ -47,5 +52,8 @@ export class AllCarsComponent implements OnInit {
         car.car.toLowerCase().includes(searchTerm) ||
         car.car_model.toLowerCase().includes(searchTerm),
     );
+
+  this.page = 1;
+
   }
 }

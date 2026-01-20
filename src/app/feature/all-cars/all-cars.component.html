@@ -41,7 +41,7 @@
 
   <!-- Cards -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-    @for (car of filteredCars; track $index) {
+    @for (car of filteredCars | paginate: { itemsPerPage: itemsPerPage, currentPage: page }; track $index) {
     <div class="car-card bg-white rounded-xl shadow-md p-6 flex flex-col">
       <!-- Image -->
       <div class="h-32 flex items-center justify-center mb-4">
@@ -83,3 +83,8 @@
     }
   </div>
 </section>
+
+<pagination-controls
+  (pageChange)="page = $event"
+  class="mt-4 flex justify-center"
+></pagination-controls>
