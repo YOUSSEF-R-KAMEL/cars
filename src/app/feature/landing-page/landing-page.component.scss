@@ -1,0 +1,32 @@
+.landing {
+  background-image: url('/images/Frame.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  min-height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-family: Poppins;
+}
+
+.img-container img {
+  z-index: 9999;
+  width: 100%;
+}
+
+.right svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}

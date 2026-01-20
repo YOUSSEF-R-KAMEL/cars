@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
+  isMenuOpen = false;
+
+  toggleMobileMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
 
 }
