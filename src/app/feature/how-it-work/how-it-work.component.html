@@ -1,0 +1,68 @@
+<div class="container mx-auto px-6 py-20">
+  <div class="text-center mb-20">
+    <span class="inline-block bg-blue-100 text-blue-500 text-xs font-semibold px-10 py-2 rounded-md mb-4">
+      How it works
+    </span>
+    <h2 class="text-3xl md:text-4xl font-bold mt-3">
+      Rent with following 3 working steps
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center text-center">
+        <div class="step-icon text-center bg-blue-100 text-blue-500 text-2xl px-5 py-2 rounded-md mb-3">
+          <i class="fas fa-map-marker-alt w-fit"></i>
+        </div>
+        <h4 class="step-title font-bold">Choose location</h4>
+        <p class="step-desc text-sm text-gray-600 mt-2">
+          Choose your location and find your best car
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col items-center text-center">
+        <div class="step-icon text-center bg-blue-100 text-blue-500 text-2xl px-5 py-2 rounded-md mb-3">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h4 class="step-title font-bold">Pick-up date</h4>
+        <p class="step-desc text-sm text-gray-600 mt-2">
+          Select your pick up date and time to book your car
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center text-center">
+        <div class="step-icon text-center bg-blue-100 text-blue-500 text-2xl px-5 py-2 rounded-md mb-3">
+          <i class="fas fa-car"></i>
+        </div>
+        <h4 class="step-title font-bold">Book your car</h4>
+        <p class="step-desc text-sm text-gray-600 mt-2">
+          Book your car and we will deliver it directly to you
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<owl-carousel-o [options]="customOptions">
+
+  <ng-template carouselSlide>
+    <img src="images/brands/audi.svg" alt="Nissan" class="max-h-28 mx-auto" />
+  </ng-template>
+
+  <ng-template carouselSlide>
+    <img src="images/brands/bmw.png" alt="Volvo" class="max-h-28 mx-auto" />
+  </ng-template>
+
+  <ng-template carouselSlide>
+    <img src="images/brands/jaguar.svg" alt="Audi" class="max-h-28 mx-auto" />
+  </ng-template>
+
+  <ng-template carouselSlide>
+    <img src="images/brands/nissan.svg" alt="Jaguar" class="max-h-28 mx-auto" />
+  </ng-template>
+
+  <ng-template carouselSlide>
+    <img src="images/brands/volvo.svg" alt="BMW" class="max-h-28 mx-auto" />
+  </ng-template>
+
+</owl-carousel-o>

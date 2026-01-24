@@ -34,7 +34,6 @@ export class PopularCarsComponent implements OnInit {
           reviews: Math.floor(Math.random() * 500) + 1,
         }))
         .slice(0, 4);
-      console.log(this.cars);
     });
   }
 }

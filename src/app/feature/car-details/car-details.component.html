@@ -1,0 +1,125 @@
+<!-- Breadcrumb -->
+<section class="container mx-auto px-4 py-12">
+  <nav class="flex mb-4" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center">
+      <li class="inline-flex items-center">
+        <a routerLink="/home">Home/</a>
+      </li>
+      <li aria-current="page">
+        <div class="flex items-center">
+          <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Car id {{ currentId }}</span>
+        </div>
+      </li>
+    </ol>
+  </nav>
+</section>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative py-5">
+  <div class="image-container">
+    <img src="images/why-choose.svg" alt="Shape" class="absolute -z-10 top-0 left-0" />
+    <img src="images/cars/car_02.png" alt="Car" class="car-img absolute" />
+  </div>
+
+  <div class="container content pr-4">
+    <span class="inline-block bg-blue-100 text-blue-500 text-xs font-semibold px-10 py-2 rounded-md mb-4">
+      Why choose us
+    </span>
+
+    <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-10">
+      We offer the best experience with our rental deals
+    </h2>
+
+    <ul class="space-y-6">
+
+      <!-- Car Type -->
+      <li class="feature-item flex items-center">
+        <div class="step-icon flex items-center justify-center  text-gray-600 text-xl px-3 rounded-xl me-1">
+          <i class="fas fa-car-side"></i>
+        </div>
+        <div>
+          <p class="font-medium">
+            Type: {{ currentCar?.car }}
+          </p>
+        </div>
+      </li>
+
+      <!-- Car Color -->
+      <li class="feature-item flex items-center">
+        <div class="step-icon flex items-center justify-center  text-gray-600 text-xl px-3 rounded-xl me-1">
+          <i class="fas fa-palette"></i>
+        </div>
+        <div>
+          <p class="font-medium">
+            Car Color: {{ currentCar?.car_color }}
+          </p>
+        </div>
+      </li>
+
+      <!-- Car Model -->
+      <li class="feature-item flex items-center">
+        <div class="step-icon flex items-center justify-center  text-gray-600 text-xl px-3 rounded-xl me-1">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <div>
+          <p class="font-medium">
+            Car Model: {{ currentCar?.car_model }}
+          </p>
+        </div>
+      </li>
+
+      <!-- Car Model Year -->
+      <li class="feature-item flex items-center">
+        <div class="step-icon flex items-center justify-center  text-gray-600 text-xl px-3 rounded-xl me-1">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div>
+          <p class="font-medium">
+            Model Year: {{ currentCar?.car_model_year }}
+          </p>
+        </div>
+      </li>
+
+      <!-- VIN -->
+      <li class="feature-item flex items-center">
+        <div class="step-icon flex items-center justify-center  text-gray-600 text-xl px-3 rounded-xl me-1">
+          <i class="fas fa-barcode"></i>
+        </div>
+        <div>
+          <p class="font-medium">
+            VIN: {{ currentCar?.car_vin }}
+          </p>
+        </div>
+      </li>
+
+      <!-- Price -->
+      <li class="feature-item flex items-center">
+        <div class="step-icon flex items-center justify-center  text-gray-600 text-xl px-3 rounded-xl me-1">
+          <i class="fas fa-dollar-sign"></i>
+        </div>
+        <div>
+          <p class="font-medium">
+            Price: {{ currentCar?.price }}
+          </p>
+        </div>
+      </li>
+
+      <!-- Availability -->
+      <li class="feature-item flex items-center">
+        <div class="step-icon flex items-center justify-center  text-gray-600 text-xl px-3 ounded-xl me-1">
+          @if (currentCar?.availability) {
+          <i class="fas fa-check-circle"></i>
+          } @else {
+          <i class="fas fa-times-circle"></i>
+          }
+        </div>
+        <div>
+          <p class="font-medium">
+            Availability: {{ currentCar?.availability ? 'Available' : 'Not Available' }}
+          </p>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
