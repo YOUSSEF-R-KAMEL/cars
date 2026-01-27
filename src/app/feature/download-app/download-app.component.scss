@@ -1,0 +1,23 @@
+.pyramid {
+  top: -7rem;
+  left: -2rem;
+}
+
+@media (max-width: 1024px) {
+  .pyramid {
+    top: 7rem;
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .pyramid {
+    height: 43rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .pyramid {
+    height: 36rem;
+  }
+}

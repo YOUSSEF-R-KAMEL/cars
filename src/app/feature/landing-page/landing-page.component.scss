@@ -42,7 +42,6 @@
   // Medium screens (tablets)
   @media (min-width: 640px) and (max-width: 1023px) {
     width: 100%;
-    margin-bottom: 2rem;
     text-align: center;
 
     h1 {
@@ -136,7 +135,7 @@
 
   // Large screens (desktop)
   @media (min-width: 1024px) {
-    width: 75rem;
+    width: 70rem;
     max-width: none;
     height: auto;
   }

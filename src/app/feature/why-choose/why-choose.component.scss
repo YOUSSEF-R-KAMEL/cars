@@ -1,7 +1,7 @@
-.car-img  {
+.car-img {
   left: -10rem;
   width: 45rem;
-  bottom: 0;
+  top: 8rem;
 }
 
 @media (max-width: 1024px) {
@@ -9,14 +9,16 @@
     img {
       position: initial;
     }
-    .car-img  {
+
+    .car-img {
       width: 40rem;
-        left: 50%;
-        position: absolute !important;
-        top: 20%;
-        transform: translate(-50%);
+      left: 50%;
+      position: absolute !important;
+      top: 20%;
+      transform: translate(-50%);
     }
   }
+
   .content {
     padding-left: 92.5px;
     padding-bottom: 5rem;
